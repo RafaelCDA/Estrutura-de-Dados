@@ -1,19 +1,26 @@
 #include <stdio.h>
 
-int soma_array(int arr[], int tamanho) {
+int somarArray(int array[], int tamanho) {
     int soma = 0;
     for (int i = 0; i < tamanho; i++) {
-        soma += arr[i];
+        soma += array[i];
     }
     return soma;
 }
 
 int main() {
-    int array_exemplo[] = {7, 8, 9, 2};
-    int tamanho = sizeof(array_exemplo) / sizeof(array_exemplo[0]);
+    int tamanho;
+    printf("Digite o tamanho do array: ");
+    scanf("%d", &tamanho);
 
-    int resultado = soma_array(array_exemplo, tamanho);
-    printf("Saida: %d\n", resultado);  // Saída: 27
+    int array[tamanho];
+    printf("Digite os elementos do array:\n");
+    for (int i = 0; i < tamanho; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    int resultado = somarArray(array, tamanho);
+    printf("A soma dos elementos do array e: %d\n", resultado);
 
     return 0;
 }
