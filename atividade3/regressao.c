@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Struct para representar um ponto (x, y)
+
 struct Ponto {
     double x;
     double y;
@@ -10,7 +10,7 @@ struct Ponto {
 
 int main() {
 printf("Abrindo o arquivo...\n");
-FILE *arquivo = fopen("\\arquivos\\dados.csv", "r");
+FILE *arquivo = fopen("atividade3\dados.csv");
 if (!arquivo) {
     perror("Erro ao abrir o arquivo");
     return 1;
